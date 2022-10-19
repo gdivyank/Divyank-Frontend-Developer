@@ -9,7 +9,7 @@ body {
 	box-sizing: border-box;
 	outline: none !important;
 	background: rgb(26, 26, 26);
-	background-image: url("/spacex-bg.png");
+	background-image: url("spacebg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: left center;
@@ -17,6 +17,8 @@ body {
 	overflow-y: scroll;
 	min-height: 100vh;
 }
+
+
 body #fonts {
 	font-family: "Jost", sans-serif !important;
 }
@@ -47,13 +49,16 @@ a {
 }
 .dashboard-container {
 	width: 80%;
-	margin: 0 auto !important;
+	margin: 210px auto auto auto !important;
 	display: flex;
 	flex-direction: column;
-	opacity: 0.95;
+	opacity: 0.9;
+	padding-bottom: 400px;
 
 	.filters-container {
 		padding: 1.7rem 0;
+		background-color: white ;
+		border-radius: 22px 22px 0px 0px;
 	}
 }
 .timeline-filter {
@@ -251,3 +256,41 @@ td {
 	display: flex !important;
 	justify-content: center !important;
 }
+.typedStyle {
+	font-size: 72px;
+	color: azure;
+	position: relative;
+	
+}
+.typedWrapper {
+	margin-top: 300px;
+}
+.banner {
+	width: 100vw;
+	height: 80vh;
+
+}
+.videoHeight {
+	width: 100vw;
+	height: 40px;
+}
+.greyTransparent {
+	background-color: rgba(29,28,28,0.5);
+	position: relative;
+	z-index: 32;
+	width: 100vw;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@media only screen and (max-width: 600px) {
+	.typedStyle {
+		font-size: 22px;
+		color: azure;
+		position: relative;
+	}
+}
+
+//video tag 
+

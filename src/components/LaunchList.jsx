@@ -40,16 +40,16 @@ function LaunchList({
 								<Table.Header>
 									<Table.Row>
 										<Table.HeaderCell className="table-heading-small">
-											Flight No.
+											Capsule No.
 										</Table.HeaderCell>
 										<Table.HeaderCell className="table-heading">
-											Mission
+											Details
 										</Table.HeaderCell>
 										<Table.HeaderCell>
-											Orbit
+											Type
 										</Table.HeaderCell>
 										<Table.HeaderCell>
-											Rocket
+											Mission Name
 										</Table.HeaderCell>
 										<Table.HeaderCell>
 											lauched (UTC)
@@ -64,36 +64,36 @@ function LaunchList({
 									{launches.map((launch) => {
 										return (
 											<Table.Row
-												key={launch.flight_number}
+												key={launch.capsule_serial}
 												onClick={() =>
 													handleEvents(launch)
 												}
 											>
 												<Table.Cell>
-													{launch.flight_number}
+													{launch.capsule_serial}
+												</Table.Cell>
+												
+												<Table.Cell>
+													{launch.details}
 												</Table.Cell>
 												<Table.Cell>
-													{launch.mission_name}
+													{launch.type}
 												</Table.Cell>
 												<Table.Cell>
-													{
-														launch.rocket
-															.second_stage
-															.payloads[0].orbit
-													}
+												
+													{launch && launch.missions && launch.missions[0] ? launch.missions[0].name : ''}
+													
 												</Table.Cell>
-												<Table.Cell>
-													{launch.rocket.rocket_name}
-												</Table.Cell>
+												
 
 												<Table.Cell>
 													{getFormattedDate(
-														launch.launch_date_utc
+														launch.original_launch
 													)}
 												</Table.Cell>
 												<Table.Cell>
 													{getStatusLabel(
-														launch.launch_success
+														launch.status
 													)}
 												</Table.Cell>
 											</Table.Row>

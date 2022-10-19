@@ -2,20 +2,21 @@ import React from "react";
 import { Dropdown } from "semantic-ui-react";
 
 const launchStatuses = [
+	
 	{
-		key: "All Launches",
-		text: "All ",
-		value: "All",
+		key: "Retired",
+		text: "Retired",
+		value: 'retired',
 	},
 	{
-		key: "Successful",
-		text: "Successful",
-		value: true,
+		key: "Active",
+		text: "Active",
+		value: 'active',
 	},
 	{
-		key: "Failed",
-		text: "Failed",
-		value: false,
+		key: "Unknown",
+		text: "Unknown",
+		value: 'unknown',
 	},
 ];
 
